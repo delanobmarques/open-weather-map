@@ -41,7 +41,7 @@ const  App = () => {
 
   return (
     <div className={`mx-auto max-w-screen-md mt-4 
-                    py-2 px-32 bg-gradient-to-br
+                    pt-4 pb-10 px-32 bg-gradient-to-br
                     h-fit shadow-xl shadow-gray-400 
                     ${updateBackground()}`}
     >
