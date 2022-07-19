@@ -19,7 +19,8 @@ const  App = () => {
     const fetchWeather = async () => {
       await getFormattedWeatherData({...query, units}).then(
         (data) => {
-          setWeather(data);
+          console.log(data);
+          setWeather(data);          
         }
       );
     }
@@ -37,10 +38,9 @@ const  App = () => {
       {weather && (
         <>
           <TimeAndLocation weather = {weather}/>
-          <TemperatureAndDetails weather = {weather} />
-    
-          <Forecast title="Hourly Forecast"/>
-          <Forecast title="Daily Forecast"/>
+          <TemperatureAndDetails weather = {weather} />    
+          <Forecast title="Hourly Forecast" items={weather.formattedForecastWeather.hourly} />
+          <Forecast title="Daily Forecast" items={weather.formattedForecastWeather.daily}/>
         </>
       )}
       
