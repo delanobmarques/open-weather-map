@@ -1,7 +1,7 @@
 import React from 'react'
 import { iconUrlFromCode } from '../../services/weatherService';
 
-const Forecast = ({title, items}) => {
+const Forecast = ({title, items}) => {        
   return (
     <>
         <div className="flex items-center justify-start mt-6">
@@ -14,7 +14,7 @@ const Forecast = ({title, items}) => {
 
         <div className="flex flex-row items-center justify-between text-white">
             {items.map((item) => (
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center" key={item.title}>
                     <p className="font-light text-sm">
                         {item.title}
                     </p>
